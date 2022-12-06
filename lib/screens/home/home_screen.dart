@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
+import 'package:market_place_flutter_app/screens/product/product_detail_screen.dart';
 import 'package:market_place_flutter_app/utils/app_styles.dart';
 
 import '../../utils/size_config.dart';
@@ -216,89 +218,95 @@ class _HomeScreenState extends State<HomeScreen> {
                 horizontal: kPaddingHorizontal,
               ),
               itemBuilder: (context, index) {
-                return Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Stack(
-                      children: [
-                        Positioned(
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(kBorderRadius),
-                            child: Image.asset(
-                              'assets/images/${images[index]}',
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                        ),
-                        Positioned(
-                          right: 12,
-                          top: 12,
-                          child: GestureDetector(
-                            onTap: () {},
-                            child: SvgPicture.asset(
-                              'assets/favorite_cloth_icon_unselected.svg',
-                            ),
-                          ),
-                        )
-                      ],
-                    ),
-                    const SizedBox(
-                      height: 8,
-                    ),
-                    Text(
-                      'Modern light clothes',
-                      maxLines: 2,
-                      overflow: TextOverflow.ellipsis,
-                      style: kEncodeSansSemibold.copyWith(
-                        color: kDarkBrown,
-                        fontSize: SizeConfig.blockSizeHorizontal! * 3.5,
-                      ),
-                    ),
-                    Text(
-                      'Dress modern',
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                      style: kEncodeSansRagular.copyWith(
-                        color: kGrey,
-                        fontSize: SizeConfig.blockSizeHorizontal! * 2.5,
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 8,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Text(
-                          '\$212.99',
-                          style: kEncodeSansSemibold.copyWith(
-                            color: kDarkBrown,
-                            fontSize: SizeConfig.blockSizeHorizontal! * 3.5,
-                          ),
-                        ),
-                        Row(
-                          children: [
-                            const Icon(
-                              Icons.star,
-                              color: kYellow,
-                              size: 16,
-                            ),
-                            const SizedBox(
-                              width: 8,
-                            ),
-                            Text(
-                              '5.0',
-                              style: kEncodeSansRagular.copyWith(
-                                color: kDarkBrown,
-                                fontSize: SizeConfig.blockSizeHorizontal! * 3,
+                return GestureDetector(
+                  onTap: () {
+                    Get.to(const ProductDetailScreen());
+                  },
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Stack(
+                        children: [
+                          Positioned(
+                            child: ClipRRect(
+                              borderRadius:
+                                  BorderRadius.circular(kBorderRadius),
+                              child: Image.asset(
+                                'assets/images/${images[index]}',
+                                fit: BoxFit.cover,
                               ),
                             ),
-                          ],
+                          ),
+                          Positioned(
+                            right: 12,
+                            top: 12,
+                            child: GestureDetector(
+                              onTap: () {},
+                              child: SvgPicture.asset(
+                                'assets/favorite_cloth_icon_unselected.svg',
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 8,
+                      ),
+                      Text(
+                        'Modern light clothes',
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
+                        style: kEncodeSansSemibold.copyWith(
+                          color: kDarkBrown,
+                          fontSize: SizeConfig.blockSizeHorizontal! * 3.5,
                         ),
-                      ],
-                    )
-                  ],
+                      ),
+                      Text(
+                        'Dress modern',
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: kEncodeSansRagular.copyWith(
+                          color: kGrey,
+                          fontSize: SizeConfig.blockSizeHorizontal! * 2.5,
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 8,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Text(
+                            '\$212.99',
+                            style: kEncodeSansSemibold.copyWith(
+                              color: kDarkBrown,
+                              fontSize: SizeConfig.blockSizeHorizontal! * 3.5,
+                            ),
+                          ),
+                          Row(
+                            children: [
+                              const Icon(
+                                Icons.star,
+                                color: kYellow,
+                                size: 16,
+                              ),
+                              const SizedBox(
+                                width: 8,
+                              ),
+                              Text(
+                                '5.0',
+                                style: kEncodeSansRagular.copyWith(
+                                  color: kDarkBrown,
+                                  fontSize: SizeConfig.blockSizeHorizontal! * 3,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
                 );
               },
             ),
