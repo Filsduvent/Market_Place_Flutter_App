@@ -17,9 +17,9 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   List<String> categories = [
     "All Items",
-    "Dress",
-    "Hat",
-    "Watch",
+    "Legumes",
+    "Cereales",
+    "Tubercules",
   ];
 
   List<String> icons = [
@@ -30,14 +30,15 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
   List<String> images = [
-    'image-01.png',
-    'image-02.png',
-    'image-03.png',
-    'image-04.png',
-    'image-05.jpg',
-    'image-06.jpg',
-    'image-07.jpg',
-    'image-08.jpg',
+    'mais.jpg',
+    'mango.jpg',
+    'manioc.jpg',
+    'oranges.jpg',
+    'pomme.jpg',
+    'pommedeterre.jpg',
+    'tomate.jpg',
+    'chips.jpg',
+    'chou.jpg'
   ];
 
   int current = 0;
@@ -69,7 +70,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ),
                       Text(
-                        'Albert Stevano',
+                        'Fils du vent',
                         style: kEncodeSansBold.copyWith(
                           color: kDarkBrown,
                           fontSize: SizeConfig.blockSizeHorizontal! * 4,
@@ -112,7 +113,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                           child: Icon(Icons.search),
                         ),
-                        hintText: 'Sarch clothes...',
+                        hintText: 'Sarch products...',
                         border: kInputBorder,
                         errorBorder: kInputBorder,
                         disabledBorder: kInputBorder,
@@ -253,7 +254,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         height: 8,
                       ),
                       Text(
-                        'Modern light clothes',
+                        'Delicious Mangos',
                         maxLines: 2,
                         overflow: TextOverflow.ellipsis,
                         style: kEncodeSansSemibold.copyWith(
@@ -262,7 +263,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ),
                       Text(
-                        'Dress modern',
+                        'Milky Fruits',
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                         style: kEncodeSansRagular.copyWith(
@@ -278,7 +279,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Text(
-                            '\$212.99',
+                            'BIF 5000',
                             style: kEncodeSansSemibold.copyWith(
                               color: kDarkBrown,
                               fontSize: SizeConfig.blockSizeHorizontal! * 3.5,

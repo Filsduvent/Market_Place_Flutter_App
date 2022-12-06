@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:market_place_flutter_app/screens/cart/CartPage.dart';
 
 class AppBarWidget extends StatelessWidget {
   const AppBarWidget({Key? key}) : super(key: key);
@@ -39,7 +40,9 @@ class AppBarWidget extends StatelessWidget {
 
           // Cart button
           InkWell(
-            onTap: () {},
+            onTap: () {
+              Get.to(const CartPage());
+            },
             child: Container(
               padding: const EdgeInsets.all(8),
               decoration: BoxDecoration(

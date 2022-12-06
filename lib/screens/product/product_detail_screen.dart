@@ -21,7 +21,7 @@ class ProductDetailScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(16),
               child: Image.asset(
-                "assets/images/image-01.png",
+                "assets/images/mango.jpg",
                 height: 300,
                 // width: double.infinity,
                 // heigth:100,
