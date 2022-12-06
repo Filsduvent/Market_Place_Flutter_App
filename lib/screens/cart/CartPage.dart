@@ -54,7 +54,7 @@ class CartPage extends StatelessWidget {
                             child: Image.asset(
                               "assets/images/oranges.jpg",
                               height: 80,
-                              width: 150,
+                              width: 130,
                             ),
                           ),
                           Container(
@@ -146,7 +146,7 @@ class CartPage extends StatelessWidget {
                             child: Image.asset(
                               "assets/images/pomme.jpg",
                               height: 80,
-                              width: 150,
+                              width: 130,
                             ),
                           ),
                           Container(
